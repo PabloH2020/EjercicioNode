@@ -1,0 +1,52 @@
+
+<div>
+    <h2>¿No está Registrado? Complete el Formulario con sus Datos</h2><br><br>
+    <div>
+        <label for="name">Name:</label>
+        <input placeholder="name" name="name" type="text" class="registro">
+    </div>
+     <div>
+        <label for="LastName">LastName:</label>
+        <input placeholder="Lastname" name="LastName"  type="text" class="registro">
+    </div>   
+     <div>
+        <label for="email">Email:</label>
+        <input placeholder="email" name="email"  type="text" class="registro">
+    </div>
+    <div>
+        <label for="phone">Phone:</label>
+        <input placeholder="phone" name="phone"  type="text" class="registro">
+    </div>       
+        
+    <button>Submit</button>
+    
+</div>
+
+
+<script>
+
+let but = document.querySelector('button');
+let valores ={};
+
+
+but.addEventListener('click', ()=>{
+
+    let datos = Array.from(document.getElementsByClassName('registro'));
+    datos.forEach( el => {  valores[el.name] = el.value ; } )
+
+    //Intento enviar el objeto 'valores' con los datos a mi archivo index.js
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST','');
+    
+    xhr.send(valores);
+    
+    
+
+});
+  
+
+
+
+        
+   
+</script>

@@ -1,0 +1,20 @@
+<h1>Bienvenido a Home</h1>
+{{>navegador}}
+<a id="LT">Login</a>
+<div id="lg">{{>login}}</div>
+{{>formulario}}
+
+
+<script>
+    
+    let trigger1 = document.getElementById("LT");
+    let log = document.getElementById("lg");
+    trigger1.addEventListener( "click" , () =>{
+        log.style.display = "block";
+    });
+
+ 
+
+   
+</script>
+
